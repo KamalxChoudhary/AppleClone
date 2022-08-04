@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body{
+overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container{
+    width: 100vw;
+    display: grid;
+ 
+    grid-template-areas: 'header header'
+                        'section1 section1'
+                        'section2 section2'
+                        'section3 section3'
+                        'section4 section4'
+                        'aside1 aside2'
+                        'aside3 aside4'
+                        'aside5 aside6'
+                       'footer footer'  
+                        
+}
+.aside6{
+    grid-area: aside6;
+    background-color: rgb(187, 255, 0);
+    height: 600px;
+}
+.aside5{
+    grid-area: aside5;
+    background-color: rgb(243, 0, 0);
+    height: 600px;
+}
+.aside4{
+    grid-area: aside4;
+    background-color: rgb(25, 16, 200);
+    height: 600px;
+}
+.aside3{
+    grid-area: aside3;
+    background-color: rgb(1, 127, 64);
+    height: 600px;
+}
+
+.aside2{
+    grid-area: aside2;
+    
+    height: 600px;
+}
+.aside1{height: 600px;
+    grid-area: aside1;
+    background-color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(101, 101, 101);
+    height: 700px;
+    width: 100vw;
+}
+.section1{ grid-area: section1;
+background-color: rgb(229, 229, 229);
+height: 105px;
+width: 100vw;
+
+}
+.section2{
+    grid-area: section2;
+  background-color: rgb(255, 252, 252);
+   height: 600px;
+   width: 100vw;
+
+}
+.section3{
+    grid-area: section3;
+    background-color: rgb(255, 252, 252);
+    height: 570px;
+  width: 100vw;
+}
+
+.section4{
+    grid-area: section4;
+    background-color: black;
+    height: 670px;
+  width: 100vw;
+
+}
+    .header{ z-index: 2;
+        grid-area: header;
+        position: fixed;
+        width: 100vw;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+       background-color: rgb(55, 55, 55);
+       height: 43px;
+    }
+
+li{
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    list-style: none;
+    float: left;
+    padding: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.appleimg{ position: absolute;
+    top: 8px;
+    left: 310px;
+    width: 15px;
+    height: 30px;
+}
+
+.searchimg{ position: absolute;
+    top: 6px;
+   
+    width: 15px;
+    height: 35px;
+}
+
+.bagimg{ position: absolute;
+    top: 6px;
+    left: 1240px;
+    width: 13px;
+    height: 35px;
+}
+
+.unicefimg{position: absolute;
+    top: 60px;
+    left: 500px;
+    width: 120px;
+    height: 30px;
+}
+ .uni{
+    position: absolute;
+    top: 67px;
+    left: 650px;
+    color: #06c;
+   
+ }
+ .uni:hover{
+    text-decoration: #06c solid 1px underline;
+ }
+ .iphone11{
+ 
+  margin-left: 230px;
+    background-image: url('./hero_iphone13pro_avail__iy77cld0zwii_medium.jpg');
+   background-repeat: no-repeat;
+   height: 800px;
+   width: 100vw;
+ }
+
+
+.iphone11h1{
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    font-size: 60px;
+   
+   
+    color: black;
+}
+.iphone11h2{
+   
+    position: absolute;
+    top: 270px;
+    left: 740px;
+    font-size: 30px;
+   
+    color: black;
+}
+.learnmore{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 330px;
+    left: 700px;
+    
+    
+}
+
+.learnmore:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+.buy{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 330px;
+    left: 850px;
+    
+}
+
+.buy:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+
+.iphonese{
+ margin-top: 20px;
+margin-left: 240px;
+background-image: url('./hero_iphonese_avail__eg8srhcnpo66_medium.jpg');
+background-repeat: no-repeat;
+width: 100vw;
+height: 600px;
+
+
+}
+
+.thenew{position: absolute;
+    top: 785px;
+    left: 700px;
+    font-size: 20px;
+}
+.se{
+    position: absolute;
+left: 650px;
+    top: 830px;
+}
+.lovethepower{position: absolute;
+    top: 890px;
+    left: 580px;
+    font-size: 30px;
+}
+
+.learnmore1{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 950px;
+    left: 650px;
+    
+    
+}
+
+.learnmore1:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+.buy1{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 950px;
+    left: 800px;
+    
+}
+
+.buy1:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+.ipad{
+    
+margin-left: 240px;
+background-image: url('./hero_ipadair_avail__dsqv5nn0tpsi_medium.jpg');
+background-repeat: no-repeat;
+width: 100vw;
+height: 600px;
+}
+.logoipad{
+    position: absolute;
+left: 200px;
+    top: 1530px;
+}
+.lbfom{
+    color: white;
+    position: absolute;
+    top: 1590px;
+    left: 130px;
+    font-size: 30px;
+   
+}
+
+.learnmore2{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 1650px;
+    left: 200px;
+    
+    
+}
+
+.learnmore2:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+.buy2{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 1650px;
+    left: 360px;
+    
+}
+
+.buy2:hover{
+    text-decoration: #06c solid 2px underline;
+}
+.wwdc{background-image: url('./wccc.jpg');
+background-repeat: no-repeat;
+
+    height: 600px;
+    width: 750px;
+    margin-top: 90px;
+    margin-left: 30px;
+   
+}
+
+.wwdc22img{
+    height: 40px;
+    position: absolute;
+    top: 2360px;
+    left: 210px;
+}
+.wwdcheading{
+    font-size: 25px;
+    position: absolute;
+    top: 2420px;
+    left: 150px;
+    color: white;
+
+}
+
+.learnmore3{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 2490px;
+    left: 270px;
+    
+    
+}
+
+.learnmore3:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+
+.studiodisplayimg{
+    height: 600px;
+    width: 750px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.studioheading{
+    font-size: 40px;
+    position: absolute;
+    top: 1990px;
+    left: 1020px;
+   color: black;
+}
+
+.sightheading{
+    font-size: 20px;
+    position: absolute;
+    top: 2050px;
+    left: 1070px;
+   color: black;
+}
+
+.learnmore4{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 2100px;
+    left: 1030px;
+    
+    
+}
+
+.learnmore4:hover{
+    text-decoration: #06c solid 2px underline;
+}
+
+.buy4{
+    color: #06c;
+    font-size: 20px;
+    position: absolute;
+    top: 2100px;
+    left: 1170px;
+    
+}
+
+.buy4:hover{
+    text-decoration: #06c solid 2px underline;
+}
+</style>
+<body>
+    
+<div class="container">
+
+<div class="header">
+<ul>
+<li><a href="#"><img class="appleimg" src="./applee.png"></a></li>
+<li><a href="#">Store</a></li>
+<li><a href="#">Mac</a></li>
+<li><a href="#">iPad</a></li>
+<li><a href="#">iPhone</a></li>
+<li><a href="#">Watch</a></li>
+<li><a href="#">AirPods</a></li>
+<li><a href="#">TV & Home</a></li>
+<li><a href="#">Only on Apple</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Support</a></li>
+<li><a href="#"><img class="searchimg" src="./searchh.png"></a></li>
+<li><a href="#"><img class="bagimg" src="./bag.png"></a></li>
+</ul>
+</div>
+
+<div class="section1">
+<img class="unicefimg" src="./unicef_logo_dark__ejvlglygb3ee_large.png" alt="unicefimg">
+<a class="uni" href="#">Donate to support families affected by the war in Ukraine &#10532;</a> 
+</div>
+
+<div class="section2">
+<div class="iphone11">
+<h1 class="iphone11h1">iPhone 13 Pro</h1>
+<h2 class="iphone11h2">Oh.So.Pro.</h2>
+<a href="#" class="learnmore">Learn more ></a>
+<a href="#" class="buy">Buy ></a>
+</div>
+</div>
+
+<div class="section3">
+<div class="iphonese">
+<h4 class="thenew">The new</h4>
+<img src="./logoiphnse.png" class="se">
+<h2 class="lovethepower">Love the power. Love the price</h2>
+<a href="#" class="learnmore1">Learn more ></a>
+<a href="#" class="buy1">Buy ></a>
+</div>
+</div>
+
+<div class="section4">
+<div class="ipad">
+<img src="./logoipadair.png" class="logoipad">
+<h1 class="lbfom">Light. Bright. Full of might.</h1>
+<a href="#" class="learnmore2">Learn more ></a>
+<a href="#" class="buy2">Buy ></a>
+</div>
+</div>
+
+<div class="aside1">
+<div class="wwdc">
+<img src="./wwdcicon.png" class="wwdc22img">
+<h1 class="wwdcheading">The Worldwide Developers Conference <br> is coming. Join us online June 6-10.</h1>
+<a href="#" class="learnmore3">Learn more ></a>
+</div>
+</div>
+
+<div class="aside2">
+<img src="./studiodisplay.jpg" class="studiodisplayimg">
+<h1 class="studioheading">Studio Display</h1>
+<h2 class="sightheading">A sight to be bold.</h2>
+<a href="#" class="learnmore4">Learn more ></a>
+<a href="#" class="buy4">Buy ></a>
+</div>
+
+<div class="aside3">ads</div>
+
+<div class="aside4">fdhg</div>
+<div class="aside5">fdheefg</div>
+<div class="aside6">fdhgdddg</div>
+
+<div class="footer">asdsffsfgh</div>
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
